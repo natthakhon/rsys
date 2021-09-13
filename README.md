@@ -1,5 +1,5 @@
 ### Development tool
-Visual studio 2019 (standard not core)
+Visual studio 2019 (standard not core) and .net core3.1
 
 ### Tech stack
 | Platform | Tech |
