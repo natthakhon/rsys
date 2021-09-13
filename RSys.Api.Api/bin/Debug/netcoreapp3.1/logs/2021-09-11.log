@@ -1,0 +1,113 @@
+2021-09-11 14:12:35.8699||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 14:12:46.3207||INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2021-09-11 14:12:46.3207||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 14:12:46.3207||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 14:12:46.3441||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 14:13:17.3604||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 14:13:21.8769||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 14:13:21.8822||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 14:13:21.8822||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 15:05:17.4254||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 15:05:21.2020||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 15:05:21.2150||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 15:05:21.2273||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 15:08:39.1112||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 15:08:40.8522||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 15:08:40.8664||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 15:08:40.8854||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 15:10:41.7543||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 15:10:44.3667||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 15:10:44.3667||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 15:10:44.4119||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 15:15:18.7756||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 15:15:20.6792||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 15:15:20.7240||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 15:15:20.7344||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 15:20:00.5732||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 15:20:02.6988||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 15:20:02.6988||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 15:20:02.7159||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 15:23:25.7742||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 15:23:29.4364||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 15:23:29.4364||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 15:23:29.4529||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 15:28:44.9492||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 15:28:46.9222||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 15:28:46.9222||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 15:28:46.9381||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 15:43:23.8680||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 15:43:26.8386||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 15:43:26.8644||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 15:43:26.8805||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 15:47:58.2317||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 15:48:01.6803||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 15:48:01.6803||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 15:48:01.7187||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 15:52:48.2118||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 15:52:50.9055||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 15:52:50.9055||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 15:52:50.9385||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 16:00:19.4250||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 16:00:22.2905||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 16:00:22.2905||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 16:00:22.3144||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 16:14:04.9330||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 16:14:08.0386||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 16:14:08.0386||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 16:14:08.0386||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 16:15:08.5138||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 16:15:12.1231||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 16:15:12.1231||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 16:15:12.1576||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 16:17:37.2819||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 16:17:38.9131||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 16:17:38.9544||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 16:17:38.9744||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 16:34:54.9048||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 16:35:00.6106||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 16:35:00.6163||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 16:35:00.6391||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 16:37:09.8268||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 16:37:13.2801||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 16:37:13.2801||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 16:37:13.3133||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 16:40:24.2325||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 16:40:26.9916||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 16:40:26.9916||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 16:40:27.0154||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 16:48:15.3847||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 16:48:17.1765||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 16:48:17.1888||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 16:48:17.1984||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 16:52:25.7395||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 16:52:28.5604||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 16:52:28.5604||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 16:52:28.5745||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 16:56:23.0752||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 16:56:24.9417||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 16:56:24.9468||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 16:56:24.9804||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 17:01:46.6037||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 17:01:48.5863||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 17:01:48.5863||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 17:01:48.6055||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 17:04:45.0132||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 17:04:47.7877||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 17:04:47.7948||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 17:04:47.8043||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 17:06:59.5714||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 17:07:03.7863||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 17:07:03.7993||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 17:07:03.8088||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 17:08:49.3738||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 17:08:50.9652||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 17:08:50.9652||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 17:08:50.9824||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 17:09:27.9897||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 17:09:29.7484||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 17:09:29.7484||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 17:09:29.7751||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-11 17:13:57.5699||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-11 17:14:00.4240||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-11 17:14:00.4302||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-11 17:14:00.4302||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 

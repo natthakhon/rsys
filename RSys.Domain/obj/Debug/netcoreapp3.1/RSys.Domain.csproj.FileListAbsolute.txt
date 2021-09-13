@@ -1,0 +1,10 @@
+D:\code\RSys.Api\RSys.Domain\bin\Debug\netcoreapp3.1\RSys.Domain.deps.json
+D:\code\RSys.Api\RSys.Domain\bin\Debug\netcoreapp3.1\RSys.Domain.dll
+D:\code\RSys.Api\RSys.Domain\bin\Debug\netcoreapp3.1\RSys.Domain.pdb
+D:\code\RSys.Api\RSys.Domain\obj\Debug\netcoreapp3.1\RSys.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\RSys.Api\RSys.Domain\obj\Debug\netcoreapp3.1\RSys.Domain.AssemblyInfoInputs.cache
+D:\code\RSys.Api\RSys.Domain\obj\Debug\netcoreapp3.1\RSys.Domain.AssemblyInfo.cs
+D:\code\RSys.Api\RSys.Domain\obj\Debug\netcoreapp3.1\RSys.Domain.csproj.CoreCompileInputs.cache
+D:\code\RSys.Api\RSys.Domain\obj\Debug\netcoreapp3.1\RSys.Domain.dll
+D:\code\RSys.Api\RSys.Domain\obj\Debug\netcoreapp3.1\RSys.Domain.pdb
+D:\code\RSys.Api\RSys.Domain\obj\Debug\netcoreapp3.1\RSys.Domain.csproj.AssemblyReference.cache

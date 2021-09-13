@@ -1,0 +1,571 @@
+2021-09-13 09:17:57.8943||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 09:18:01.8291||ERROR|RSys.Api.Api.Program|Stopped program because of exception System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: FluentValidation.IValidator`1[RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.Domain.Validators.InfoValidator': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.) (Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[RSys.CQRS.Command.InsertQnaireCommand,RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.CQRS.Handler.InsertQnaireHandler': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.) (Error while validating the service descriptor 'ServiceType: FluentValidation.IValidator`1[RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.Domain.Validators.InfoValidator': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.) (Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[RSys.CQRS.Command.InsertQnaireCommand,RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.CQRS.Handler.InsertQnaireHandler': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: FluentValidation.IValidator`1[RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.Domain.Validators.InfoValidator': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[RSys.CQRS.Command.InsertQnaireCommand,RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.CQRS.Handler.InsertQnaireHandler': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+2021-09-13 09:18:19.0703||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 09:18:21.8331||ERROR|RSys.Api.Api.Program|Stopped program because of exception System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: FluentValidation.IValidator`1[RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.Domain.Validators.InfoValidator': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.) (Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[RSys.CQRS.Command.InsertQnaireCommand,RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.CQRS.Handler.InsertQnaireHandler': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.) (Error while validating the service descriptor 'ServiceType: FluentValidation.IValidator`1[RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.Domain.Validators.InfoValidator': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.) (Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[RSys.CQRS.Command.InsertQnaireCommand,RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.CQRS.Handler.InsertQnaireHandler': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: FluentValidation.IValidator`1[RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.Domain.Validators.InfoValidator': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[RSys.CQRS.Command.InsertQnaireCommand,RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.CQRS.Handler.InsertQnaireHandler': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+2021-09-13 09:19:51.8458||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 09:19:53.3887||ERROR|RSys.Api.Api.Program|Stopped program because of exception System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: FluentValidation.IValidator`1[RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.Domain.Validators.InfoValidator': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.) (Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[RSys.CQRS.Command.InsertQnaireCommand,RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.CQRS.Handler.InsertQnaireHandler': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.) (Error while validating the service descriptor 'ServiceType: FluentValidation.IValidator`1[RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.Domain.Validators.InfoValidator': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.) (Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[RSys.CQRS.Command.InsertQnaireCommand,RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.CQRS.Handler.InsertQnaireHandler': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: FluentValidation.IValidator`1[RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.Domain.Validators.InfoValidator': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: MediatR.IRequestHandler`2[RSys.CQRS.Command.InsertQnaireCommand,RSys.Domain.Models.Questionnaire] Lifetime: Scoped ImplementationType: RSys.CQRS.Handler.InsertQnaireHandler': Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'FluentValidation.IValidator`1[RSys.Domain.Models.Occupation]' while attempting to activate 'RSys.Domain.Validators.InfoValidator'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.<>c__DisplayClass7_0.<GetCallSite>b__0(Type type)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(Type serviceType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)<---
+
+2021-09-13 09:34:49.2030||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 09:34:50.8335||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 09:34:50.8418||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 09:34:50.8530||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 09:38:57.3880||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 09:38:59.4334||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 09:38:59.4334||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 09:38:59.4500||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 09:39:22.5372||ERROR|RSys.Api.Api.Controllers.QnaireController|System.InvalidOperationException: Unable to track an entity of type 'AddressDTO' because its primary key property 'InfoId' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityStateAsync(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintActionAsync(EntityEntryGraphNode`1 node, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraphAsync[TState](EntityEntryGraphNode`1 node, Func`3 handleNode, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraphAsync[TState](EntityEntryGraphNode`1 node, Func`3 handleNode, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.AddAsync(TEntity entity, CancellationToken cancellationToken)
+   at RSys.Sqlite.Repository.QuestionnaireRepository.InsertAsync(Questionnaire model) in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 42
+   at RSys.CQRS.Handler.InsertQnaireHandler.handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\InsertQnaireHandler.cs:line 18
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 31
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 09:40:39.7515||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 09:40:41.8403||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 09:40:41.8403||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 09:40:41.8569||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 09:41:02.0333||ERROR|RSys.Api.Api.Controllers.QnaireController|System.InvalidOperationException: Unable to track an entity of type 'AddressDTO' because its primary key property 'InfoId' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityStateAsync(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintActionAsync(EntityEntryGraphNode`1 node, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraphAsync[TState](EntityEntryGraphNode`1 node, Func`3 handleNode, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraphAsync[TState](EntityEntryGraphNode`1 node, Func`3 handleNode, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.AddAsync(TEntity entity, CancellationToken cancellationToken)
+   at RSys.Sqlite.Repository.QuestionnaireRepository.InsertAsync(Questionnaire model) in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 42
+   at RSys.CQRS.Handler.InsertQnaireHandler.handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\InsertQnaireHandler.cs:line 18
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 31
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 09:42:38.3937||ERROR|RSys.Api.Api.Controllers.QnaireController|System.InvalidOperationException: Unable to track an entity of type 'AddressDTO' because its primary key property 'InfoId' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityStateAsync(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintActionAsync(EntityEntryGraphNode`1 node, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraphAsync[TState](EntityEntryGraphNode`1 node, Func`3 handleNode, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraphAsync[TState](EntityEntryGraphNode`1 node, Func`3 handleNode, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.AddAsync(TEntity entity, CancellationToken cancellationToken)
+   at RSys.Sqlite.Repository.QuestionnaireRepository.InsertAsync(Questionnaire model) in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 42
+   at RSys.CQRS.Handler.InsertQnaireHandler.handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\InsertQnaireHandler.cs:line 18
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 31
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 09:47:31.0491||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 09:47:33.0646||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 09:47:33.0695||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 09:47:33.0695||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 09:48:07.8464||ERROR|RSys.Api.Api.Controllers.QnaireController|System.InvalidOperationException: Unable to track an entity of type 'AddressDTO' because its primary key property 'InfoId' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityStateAsync(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintActionAsync(EntityEntryGraphNode`1 node, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraphAsync[TState](EntityEntryGraphNode`1 node, Func`3 handleNode, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraphAsync[TState](EntityEntryGraphNode`1 node, Func`3 handleNode, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.AddAsync(TEntity entity, CancellationToken cancellationToken)
+   at RSys.Sqlite.Repository.QuestionnaireRepository.InsertAsync(Questionnaire model) in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 42
+   at RSys.CQRS.Handler.InsertQnaireHandler.handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\InsertQnaireHandler.cs:line 18
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 31
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 09:55:03.3510||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 09:55:05.3442||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 09:55:05.3657||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 09:55:05.3901||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 09:55:18.7270||ERROR|RSys.Api.Api.Controllers.QnaireController|System.InvalidOperationException: Unable to track an entity of type 'OccupationDTO' because its primary key property 'InfoId' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityStateAsync(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintActionAsync(EntityEntryGraphNode`1 node, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraphAsync[TState](EntityEntryGraphNode`1 node, Func`3 handleNode, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraphAsync[TState](EntityEntryGraphNode`1 node, Func`3 handleNode, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.AddAsync(TEntity entity, CancellationToken cancellationToken)
+   at RSys.Sqlite.Repository.QuestionnaireRepository.InsertAsync(Questionnaire model) in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 42
+   at RSys.CQRS.Handler.InsertQnaireHandler.handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\InsertQnaireHandler.cs:line 18
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 31
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 09:56:32.2031||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 09:56:35.1178||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 09:56:35.1178||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 09:56:35.1178||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 09:57:54.8102||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 09:57:56.8632||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 09:57:56.8685||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 09:57:56.8685||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 09:58:33.8566||ERROR|RSys.Api.Api.Controllers.QnaireController|System.InvalidOperationException: Unable to track an entity of type 'PersonalInfoDTO' because its primary key property 'InfoId' is null.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.NullableKeyIdentityMap`1.Add(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.StartTracking(InternalEntityEntry entry)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityStateAsync(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityGraphAttacher.PaintActionAsync(EntityEntryGraphNode`1 node, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraphAsync[TState](EntityEntryGraphNode`1 node, Func`3 handleNode, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.EntityEntryGraphIterator.TraverseGraphAsync[TState](EntityEntryGraphNode`1 node, Func`3 handleNode, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.AddAsync(TEntity entity, CancellationToken cancellationToken)
+   at RSys.Sqlite.Repository.QuestionnaireRepository.InsertAsync(Questionnaire model) in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 42
+   at RSys.CQRS.Handler.InsertQnaireHandler.handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\InsertQnaireHandler.cs:line 18
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 31
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 09:59:08.8614||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 09:59:10.8691||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 09:59:10.8691||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 09:59:10.8830||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 09:59:20.5909||ERROR|RSys.Api.Api.Controllers.QnaireController|Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'UNIQUE constraint failed: BusinessType.BusinessTypeId'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at RSys.Sqlite.Repository.QuestionnaireRepository.InsertAsync(Questionnaire model) in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 43
+   at RSys.CQRS.Handler.InsertQnaireHandler.handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\InsertQnaireHandler.cs:line 18
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 31
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 10:04:42.2995||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:04:44.4582||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:04:44.4650||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:04:44.4650||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 10:04:56.7079||ERROR|RSys.Api.Api.Controllers.QnaireController|Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'UNIQUE constraint failed: BusinessType.BusinessTypeId'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at RSys.Sqlite.Repository.QuestionnaireRepository.InsertAsync(Questionnaire model) in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 43
+   at RSys.CQRS.Handler.InsertQnaireHandler.handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\InsertQnaireHandler.cs:line 18
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 31
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 10:08:58.4129||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:09:00.7844||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:09:00.7885||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:09:00.7885||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 10:13:37.0121||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:13:38.9467||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:13:38.9467||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:13:38.9637||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 10:19:30.8303||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:19:32.8112||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:19:32.8112||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:19:32.8273||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 10:23:30.2430||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:23:32.0091||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:23:32.0091||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:23:32.0258||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 10:27:09.5819||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:27:10.9259||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:27:10.9298||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:27:10.9298||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 10:38:16.5724||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:38:19.0659||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:38:19.0777||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:38:19.0917||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 10:40:23.1277||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:40:25.1171||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:40:25.1171||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:40:25.1171||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 10:40:58.4945||ERROR|RSys.Api.Api.Controllers.QnaireController|Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at RSys.Sqlite.Repository.QuestionnaireRepository.InsertAsync(Questionnaire model) in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 45
+   at RSys.CQRS.Handler.InsertQnaireHandler.handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\InsertQnaireHandler.cs:line 18
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 31
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 10:51:24.6549||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:51:26.8652||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:51:26.8828||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:51:26.8828||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 10:52:32.7695||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:52:35.9852||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:52:35.9852||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:52:36.0002||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 10:53:17.0258||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:53:18.7927||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:53:18.7927||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:53:18.8051||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 10:54:26.0148||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:54:28.1115||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:54:28.1168||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:54:28.1168||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 10:55:05.0488||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:55:07.5383||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:55:07.5383||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:55:07.5547||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 10:59:22.3120||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 10:59:24.3847||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 10:59:24.3847||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 10:59:24.4049||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 11:23:34.8999||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 11:23:39.7253||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 11:23:39.7565||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 11:23:39.7670||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 13:18:41.5081||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 13:18:50.7719||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 13:18:50.7719||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 13:18:50.8026||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 13:21:44.8964||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 13:21:50.0515||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 13:21:50.0647||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 13:21:50.1121||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 13:25:29.7753||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 13:25:31.2202||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 13:25:31.2263||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 13:25:31.2263||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 13:29:08.7346||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 13:29:10.2359||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 13:29:10.2413||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 13:29:10.2413||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 13:35:37.6016||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 13:35:39.2445||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 13:35:39.2570||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 13:35:39.2570||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 13:39:04.1176||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 13:39:05.7073||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 13:39:05.7143||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 13:39:05.7143||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 13:42:28.0069||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 13:42:30.2457||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 13:42:30.2681||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 13:42:30.3030||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 13:44:14.8103||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 13:44:17.8581||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 13:44:17.8581||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 13:44:17.8739||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 13:49:21.8041||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 13:49:24.0074||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 13:49:24.0074||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 13:49:24.0247||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 13:59:17.5737||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 13:59:19.5124||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 13:59:19.5124||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 13:59:19.5297||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:09:37.0761||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 14:09:39.9151||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 14:09:40.0119||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 14:09:40.0692||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:17:02.2271||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 14:17:07.1451||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 14:17:07.1600||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 14:17:07.1697||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:19:00.3072||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 14:19:02.4540||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 14:19:02.4630||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 14:19:02.5208||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:23:31.2758||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 14:23:33.4731||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 14:23:33.4799||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 14:23:33.4920||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:26:54.6455||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 14:26:57.4888||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 14:26:57.5879||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 14:26:57.6493||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:30:09.5665||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 14:30:12.2680||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 14:30:12.2877||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 14:30:12.3043||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:32:56.9750||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 14:32:58.7955||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 14:32:58.8418||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 14:32:58.8527||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:35:38.0763||ERROR|RSys.Api.Api.Controllers.QnaireController|System.ArgumentException: Invalid Country for address or occupation
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 33
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 14:36:17.3538||ERROR|RSys.Api.Api.Controllers.QnaireController|System.ArgumentException: Invalid Country for address or occupation
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 33
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 14:37:36.5843||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 14:37:38.4826||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 14:37:38.4826||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 14:37:38.4986||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:38:16.9545||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 14:38:19.3826||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 14:38:19.3826||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 14:38:19.4013||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:39:30.9603||ERROR|RSys.Api.Api.Controllers.QnaireController|System.ArgumentException: Invalid Country for address or occupation
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 33
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 14:39:58.7835||ERROR|RSys.Api.Api.Controllers.QnaireController|System.ArgumentException: Invalid Country for address or occupation
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 33
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 14:40:56.8115||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 14:40:59.6994||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 14:40:59.6994||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 14:40:59.7254||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:42:18.5685||ERROR|RSys.Api.Api.Controllers.QnaireController|System.ArgumentException: Invalid Country for address or occupation
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 33
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 14:43:16.8865||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 14:43:19.1552||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 14:43:19.1684||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 14:43:19.1794||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:44:35.2263||ERROR|RSys.Api.Api.Controllers.QnaireController|System.ArgumentException: Invalid Country for address or occupation
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 33
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 14:45:18.3984||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 14:45:19.9915||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 14:45:20.0238||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 14:45:20.0238||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:46:29.6014||ERROR|RSys.Api.Api.Controllers.QnaireController|System.ArgumentException: Name must not be empty
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 33
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 14:50:56.3343||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-13 14:50:58.8487||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-13 14:50:58.8631||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-13 14:50:58.8746||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-13 14:53:17.2791||ERROR|RSys.Api.Api.Controllers.QnaireController|System.ArgumentException: Invalid Country for address or occupation,Lastname must not be empty
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 33
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 14:53:27.4441||ERROR|RSys.Api.Api.Controllers.QnaireController|System.ArgumentException: Lastname must not be empty
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 33
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 
+2021-09-13 14:53:59.8425||ERROR|RSys.Api.Api.Controllers.QnaireController|System.ArgumentException: JobTitle must not be empty
+   at RSys.CQRS.BaseCreateCommandHandler`1.Handle(IRequestor`1 request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseCreateCommandHandler.cs:line 33
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.CreateTheaterAsync(Questionnaire questionnaire) in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 42 

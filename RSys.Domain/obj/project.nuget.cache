@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "JRswgs7MjuckS+pELjpZnXayRfNkrJhfjXduSdKAROk9SK8LUorK7UnLDZymkwMQRI1DszV1ZVLldhjFb8wZ/w==",
+  "success": true,
+  "projectFilePath": "D:\\code\\RSys.Api\\RSys.Domain\\RSys.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nattl\\.nuget\\packages\\fluentvalidation\\10.3.3\\fluentvalidation.10.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}

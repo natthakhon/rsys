@@ -1,0 +1,13 @@
+D:\code\RSys.Api\RSys.Repository\bin\Debug\netcoreapp3.1\RSys.Repository.deps.json
+D:\code\RSys.Api\RSys.Repository\bin\Debug\netcoreapp3.1\RSys.Repository.dll
+D:\code\RSys.Api\RSys.Repository\bin\Debug\netcoreapp3.1\RSys.Repository.pdb
+D:\code\RSys.Api\RSys.Repository\bin\Debug\netcoreapp3.1\RSys.Domain.dll
+D:\code\RSys.Api\RSys.Repository\bin\Debug\netcoreapp3.1\RSys.Domain.pdb
+D:\code\RSys.Api\RSys.Repository\obj\Debug\netcoreapp3.1\RSys.Repository.csproj.AssemblyReference.cache
+D:\code\RSys.Api\RSys.Repository\obj\Debug\netcoreapp3.1\RSys.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\RSys.Api\RSys.Repository\obj\Debug\netcoreapp3.1\RSys.Repository.AssemblyInfoInputs.cache
+D:\code\RSys.Api\RSys.Repository\obj\Debug\netcoreapp3.1\RSys.Repository.AssemblyInfo.cs
+D:\code\RSys.Api\RSys.Repository\obj\Debug\netcoreapp3.1\RSys.Repository.csproj.CoreCompileInputs.cache
+D:\code\RSys.Api\RSys.Repository\obj\Debug\netcoreapp3.1\RSys.Repository.csproj.CopyComplete
+D:\code\RSys.Api\RSys.Repository\obj\Debug\netcoreapp3.1\RSys.Repository.dll
+D:\code\RSys.Api\RSys.Repository\obj\Debug\netcoreapp3.1\RSys.Repository.pdb

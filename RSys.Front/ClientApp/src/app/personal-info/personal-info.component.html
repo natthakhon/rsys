@@ -1,0 +1,91 @@
+<form [formGroup]="questions">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <select formControlName="title">
+          <option Value="" [disabled]="true" selected>Select Title</option>
+          <option *ngFor="let title of titles" [ngValue]="title">{{title.titleDescription}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="name" placeholder="Name" />
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="lastname" placeholder="Lastname" />
+      </div>
+      <div class="form-group">
+        <input type="date" class="form-control" formControlName="dob" />
+      </div>
+      <div class="form-group">
+        <select formControlName="country">
+          <option [ngValue]="null" [disabled]="true">Select Country</option>
+          <option *ngFor="let country of countries" [ngValue]="country">{{country.countryDescription}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="house" placeholder="address house" />
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="work" placeholder="address work" />
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <select formControlName="profession">
+          <option [ngValue]="null" [disabled]="true">Select Profession</option>
+          <option *ngFor="let profession of professions" [ngValue]="profession">{{profession.professionDescription}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="jobtitle" placeholder="job title" />
+      </div>
+      <div class="form-group">
+        <select formControlName="businesstype">
+          <option [ngValue]="null" [disabled]="true">Select BusinessType</option>
+          <option *ngFor="let bt of businesstypes" [ngValue]="bt">{{bt.businessTypeDescription}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <button type="button" class="btn btn-primary" (click)="save()">Save</button>
+  </div>
+  <div class="row">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Name</th>
+          <th>Lastname</th>
+          <th>DOB</th>
+          <th>Country</th>
+          <th>Address Home</th>
+          <th>Address Work</th>
+          <th>Profession</th>
+          <th>Job title</th>
+          <th>Business type</th>
+          <th>Created Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let qnaire of qnaires">
+          <td> {{qnaire.infoId}} </td>
+          <td> {{qnaire.personalInfo.title.titleDescription}} </td>
+          <td> {{qnaire.personalInfo.name}} </td>
+          <td> {{qnaire.personalInfo.lastname}} </td>
+          <td> {{qnaire.personalInfo.dob| date:"MMM/dd/yyyy"}} </td>
+          <td> {{qnaire.personalInfo.country.countryDescription}} </td>
+          <td> {{qnaire.address.house}} </td>
+          <td> {{qnaire.address.work}} </td>
+          <td> {{qnaire.occupation.profession.professionDescription}} </td>
+          <td> {{qnaire.occupation.jobTitle}} </td>
+          <td> {{qnaire.occupation.businessType.businessTypeDescription}} </td>
+          <td> {{qnaire.createDate | date:"MMM/dd/yyyy"}} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>

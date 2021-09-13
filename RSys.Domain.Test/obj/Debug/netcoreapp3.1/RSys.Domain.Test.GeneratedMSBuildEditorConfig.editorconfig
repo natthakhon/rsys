@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = RSys.Domain.Test
+build_property.ProjectDir = D:\code\RSys.Api\RSys.Domain.Test\

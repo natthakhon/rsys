@@ -1,0 +1,15 @@
+D:\code\RSys.Api\RSys.CQRS\bin\Debug\netcoreapp3.1\RSys.CQRS.deps.json
+D:\code\RSys.Api\RSys.CQRS\bin\Debug\netcoreapp3.1\RSys.CQRS.dll
+D:\code\RSys.Api\RSys.CQRS\bin\Debug\netcoreapp3.1\RSys.CQRS.pdb
+D:\code\RSys.Api\RSys.CQRS\bin\Debug\netcoreapp3.1\RSys.Domain.dll
+D:\code\RSys.Api\RSys.CQRS\bin\Debug\netcoreapp3.1\RSys.Repository.dll
+D:\code\RSys.Api\RSys.CQRS\bin\Debug\netcoreapp3.1\RSys.Domain.pdb
+D:\code\RSys.Api\RSys.CQRS\bin\Debug\netcoreapp3.1\RSys.Repository.pdb
+D:\code\RSys.Api\RSys.CQRS\obj\Debug\netcoreapp3.1\RSys.CQRS.csproj.AssemblyReference.cache
+D:\code\RSys.Api\RSys.CQRS\obj\Debug\netcoreapp3.1\RSys.CQRS.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\RSys.Api\RSys.CQRS\obj\Debug\netcoreapp3.1\RSys.CQRS.AssemblyInfoInputs.cache
+D:\code\RSys.Api\RSys.CQRS\obj\Debug\netcoreapp3.1\RSys.CQRS.AssemblyInfo.cs
+D:\code\RSys.Api\RSys.CQRS\obj\Debug\netcoreapp3.1\RSys.CQRS.csproj.CoreCompileInputs.cache
+D:\code\RSys.Api\RSys.CQRS\obj\Debug\netcoreapp3.1\RSys.CQRS.csproj.CopyComplete
+D:\code\RSys.Api\RSys.CQRS\obj\Debug\netcoreapp3.1\RSys.CQRS.dll
+D:\code\RSys.Api\RSys.CQRS\obj\Debug\netcoreapp3.1\RSys.CQRS.pdb

@@ -1,0 +1,403 @@
+2021-09-12 15:20:08.8631||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:20:12.5686||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:20:12.5787||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:20:12.5906||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 15:32:25.5174||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:32:27.3321||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:32:27.3367||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:32:27.3367||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 15:34:09.7187||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:34:11.3549||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:34:11.3549||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:34:11.3726||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 15:35:52.5713||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:35:54.5896||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:35:54.5896||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:35:54.6036||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 15:40:00.0884||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:40:01.7429||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:40:01.7429||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:40:01.7581||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 15:42:29.3038||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:42:31.5244||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:42:31.5463||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:42:31.5552||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 15:44:35.7963||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:44:37.4479||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:44:37.4479||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:44:37.4624||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 15:45:23.5127||ERROR|RSys.Api.Api.Controllers.QnaireController|AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+QuestionnaireDTO -> Questionnaire
+RSys.Sqlite.DTO.QuestionnaireDTO -> RSys.Domain.Models.Questionnaire
+
+Type Map configuration:
+QuestionnaireDTO -> Questionnaire
+RSys.Sqlite.DTO.QuestionnaireDTO -> RSys.Domain.Models.Questionnaire
+
+Destination Member:
+PersonalInfo
+
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+PersonalInfoDTO -> PersonalInfo
+RSys.Sqlite.DTO.PersonalInfoDTO -> RSys.Domain.Models.PersonalInfo
+
+Type Map configuration:
+PersonalInfoDTO -> PersonalInfo
+RSys.Sqlite.DTO.PersonalInfoDTO -> RSys.Domain.Models.PersonalInfo
+
+Destination Member:
+Title
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+TitleDTO -> Title
+RSys.Sqlite.DTO.TitleDTO -> RSys.Domain.Models.Title
+   at lambda_method(Closure , TitleDTO , Title , ResolutionContext )
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   at RSys.Sqlite.BaseMapper`2..ctor(TSource source) in D:\code\RSys.Api\RSys.Sqlite\BaseMapper.cs:line 23
+   at RSys.Sqlite.Mapper.QuestionnaireDTOModelMapper..ctor(QuestionnaireDTO questionnaireDTO) in D:\code\RSys.Api\RSys.Sqlite\Mapper\QuestionnaireDTOModelMapper.cs:line 12
+   at RSys.Sqlite.Repository.QuestionnaireRepository.GetAllAsync() in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 32
+   at RSys.CQRS.Handler.AllQnairesHandler.handle(AllQnairesRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\AllQnairesHandler.cs:line 17
+   at RSys.CQRS.BaseGetCommandHandler`2.Handle(TRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseGetCommandHandler.cs:line 44
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.GetAsync() in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 26 
+2021-09-12 15:45:52.4947||ERROR|RSys.Api.Api.Controllers.QnaireController|AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+QuestionnaireDTO -> Questionnaire
+RSys.Sqlite.DTO.QuestionnaireDTO -> RSys.Domain.Models.Questionnaire
+
+Type Map configuration:
+QuestionnaireDTO -> Questionnaire
+RSys.Sqlite.DTO.QuestionnaireDTO -> RSys.Domain.Models.Questionnaire
+
+Destination Member:
+PersonalInfo
+
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+PersonalInfoDTO -> PersonalInfo
+RSys.Sqlite.DTO.PersonalInfoDTO -> RSys.Domain.Models.PersonalInfo
+
+Type Map configuration:
+PersonalInfoDTO -> PersonalInfo
+RSys.Sqlite.DTO.PersonalInfoDTO -> RSys.Domain.Models.PersonalInfo
+
+Destination Member:
+Title
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+TitleDTO -> Title
+RSys.Sqlite.DTO.TitleDTO -> RSys.Domain.Models.Title
+   at lambda_method(Closure , TitleDTO , Title , ResolutionContext )
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   at RSys.Sqlite.BaseMapper`2..ctor(TSource source) in D:\code\RSys.Api\RSys.Sqlite\BaseMapper.cs:line 23
+   at RSys.Sqlite.Mapper.QuestionnaireDTOModelMapper..ctor(QuestionnaireDTO questionnaireDTO) in D:\code\RSys.Api\RSys.Sqlite\Mapper\QuestionnaireDTOModelMapper.cs:line 12
+   at RSys.Sqlite.Repository.QuestionnaireRepository.GetAllAsync() in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 32
+   at RSys.CQRS.Handler.AllQnairesHandler.handle(AllQnairesRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\AllQnairesHandler.cs:line 17
+   at RSys.CQRS.BaseGetCommandHandler`2.Handle(TRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseGetCommandHandler.cs:line 44
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.GetAsync() in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 26 
+2021-09-12 15:46:41.7544||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:46:45.0768||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:46:45.0768||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:46:45.0913||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 15:47:54.9422||ERROR|RSys.Api.Api.Controllers.QnaireController|AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+QuestionnaireDTO -> Questionnaire
+RSys.Sqlite.DTO.QuestionnaireDTO -> RSys.Domain.Models.Questionnaire
+
+Type Map configuration:
+QuestionnaireDTO -> Questionnaire
+RSys.Sqlite.DTO.QuestionnaireDTO -> RSys.Domain.Models.Questionnaire
+
+Destination Member:
+PersonalInfo
+
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+PersonalInfoDTO -> PersonalInfo
+RSys.Sqlite.DTO.PersonalInfoDTO -> RSys.Domain.Models.PersonalInfo
+
+Type Map configuration:
+PersonalInfoDTO -> PersonalInfo
+RSys.Sqlite.DTO.PersonalInfoDTO -> RSys.Domain.Models.PersonalInfo
+
+Destination Member:
+Title
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+TitleDTO -> Title
+RSys.Sqlite.DTO.TitleDTO -> RSys.Domain.Models.Title
+   at lambda_method(Closure , TitleDTO , Title , ResolutionContext )
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   at RSys.Sqlite.BaseMapper`2..ctor(TSource source) in D:\code\RSys.Api\RSys.Sqlite\BaseMapper.cs:line 23
+   at RSys.Sqlite.Mapper.QuestionnaireDTOModelMapper..ctor(QuestionnaireDTO questionnaireDTO) in D:\code\RSys.Api\RSys.Sqlite\Mapper\QuestionnaireDTOModelMapper.cs:line 12
+   at RSys.Sqlite.Repository.QuestionnaireRepository.GetAllAsync() in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 32
+   at RSys.CQRS.Handler.AllQnairesHandler.handle(AllQnairesRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\AllQnairesHandler.cs:line 17
+   at RSys.CQRS.BaseGetCommandHandler`2.Handle(TRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseGetCommandHandler.cs:line 44
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.GetAsync() in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 26 
+2021-09-12 15:48:52.1416||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:48:53.7092||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:48:53.7153||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:48:53.7153||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 15:49:10.3296||ERROR|RSys.Api.Api.Controllers.QnaireController|AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+QuestionnaireDTO -> Questionnaire
+RSys.Sqlite.DTO.QuestionnaireDTO -> RSys.Domain.Models.Questionnaire
+
+Type Map configuration:
+QuestionnaireDTO -> Questionnaire
+RSys.Sqlite.DTO.QuestionnaireDTO -> RSys.Domain.Models.Questionnaire
+
+Destination Member:
+PersonalInfo
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+PersonalInfoDTO -> PersonalInfo
+RSys.Sqlite.DTO.PersonalInfoDTO -> RSys.Domain.Models.PersonalInfo
+   at lambda_method(Closure , PersonalInfoDTO , PersonalInfo , ResolutionContext )
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   at RSys.Sqlite.BaseMapper`2..ctor(TSource source) in D:\code\RSys.Api\RSys.Sqlite\BaseMapper.cs:line 23
+   at RSys.Sqlite.Mapper.QuestionnaireDTOModelMapper..ctor(QuestionnaireDTO questionnaireDTO) in D:\code\RSys.Api\RSys.Sqlite\Mapper\QuestionnaireDTOModelMapper.cs:line 12
+   at RSys.Sqlite.Repository.QuestionnaireRepository.GetAllAsync() in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 32
+   at RSys.CQRS.Handler.AllQnairesHandler.handle(AllQnairesRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\AllQnairesHandler.cs:line 17
+   at RSys.CQRS.BaseGetCommandHandler`2.Handle(TRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseGetCommandHandler.cs:line 44
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.GetAsync() in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 26 
+2021-09-12 15:50:17.3680||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:50:19.1145||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:50:19.1246||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:50:19.1337||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 15:50:30.4425||ERROR|RSys.Api.Api.Controllers.QnaireController|AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+QuestionnaireDTO -> Questionnaire
+RSys.Sqlite.DTO.QuestionnaireDTO -> RSys.Domain.Models.Questionnaire
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   at RSys.Sqlite.BaseMapper`2..ctor(TSource source) in D:\code\RSys.Api\RSys.Sqlite\BaseMapper.cs:line 23
+   at RSys.Sqlite.Mapper.QuestionnaireDTOModelMapper..ctor(QuestionnaireDTO questionnaireDTO) in D:\code\RSys.Api\RSys.Sqlite\Mapper\QuestionnaireDTOModelMapper.cs:line 12
+   at RSys.Sqlite.Repository.QuestionnaireRepository.GetAllAsync() in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 32
+   at RSys.CQRS.Handler.AllQnairesHandler.handle(AllQnairesRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\AllQnairesHandler.cs:line 17
+   at RSys.CQRS.BaseGetCommandHandler`2.Handle(TRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseGetCommandHandler.cs:line 44
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.GetAsync() in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 26 
+2021-09-12 15:52:04.6428||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:52:08.4095||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:52:08.4140||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:52:08.4140||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 15:52:36.2249||ERROR|RSys.Api.Api.Controllers.QnaireController|AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+QuestionnaireDTO -> Questionnaire
+RSys.Sqlite.DTO.QuestionnaireDTO -> RSys.Domain.Models.Questionnaire
+
+Type Map configuration:
+QuestionnaireDTO -> Questionnaire
+RSys.Sqlite.DTO.QuestionnaireDTO -> RSys.Domain.Models.Questionnaire
+
+Destination Member:
+PersonalInfo
+
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+PersonalInfoDTO -> PersonalInfo
+RSys.Sqlite.DTO.PersonalInfoDTO -> RSys.Domain.Models.PersonalInfo
+
+Type Map configuration:
+PersonalInfoDTO -> PersonalInfo
+RSys.Sqlite.DTO.PersonalInfoDTO -> RSys.Domain.Models.PersonalInfo
+
+Destination Member:
+Title
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+TitleDTO -> Title
+RSys.Sqlite.DTO.TitleDTO -> RSys.Domain.Models.Title
+   at lambda_method(Closure , TitleDTO , Title , ResolutionContext )
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   at RSys.Sqlite.BaseMapper`2..ctor(TSource source) in D:\code\RSys.Api\RSys.Sqlite\BaseMapper.cs:line 23
+   at RSys.Sqlite.Mapper.QuestionnaireDTOModelMapper..ctor(QuestionnaireDTO questionnaireDTO) in D:\code\RSys.Api\RSys.Sqlite\Mapper\QuestionnaireDTOModelMapper.cs:line 12
+   at RSys.Sqlite.Repository.QuestionnaireRepository.GetAllAsync() in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 32
+   at RSys.CQRS.Handler.AllQnairesHandler.handle(AllQnairesRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\AllQnairesHandler.cs:line 17
+   at RSys.CQRS.BaseGetCommandHandler`2.Handle(TRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseGetCommandHandler.cs:line 44
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.GetAsync() in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 26 
+2021-09-12 15:55:10.9464||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:55:14.0221||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:55:14.0286||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:55:14.0286||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 15:57:21.6634||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:57:24.0616||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:57:24.0616||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:57:24.0747||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 15:57:34.2315||ERROR|RSys.Api.Api.Controllers.QnaireController|AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+QuestionnaireDTO -> Questionnaire
+RSys.Sqlite.DTO.QuestionnaireDTO -> RSys.Domain.Models.Questionnaire
+
+Type Map configuration:
+QuestionnaireDTO -> Questionnaire
+RSys.Sqlite.DTO.QuestionnaireDTO -> RSys.Domain.Models.Questionnaire
+
+Destination Member:
+PersonalInfo
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+PersonalInfoDTO -> PersonalInfo
+RSys.Sqlite.DTO.PersonalInfoDTO -> RSys.Domain.Models.PersonalInfo
+   at lambda_method(Closure , PersonalInfoDTO , PersonalInfo , ResolutionContext )
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , QuestionnaireDTO , Questionnaire , ResolutionContext )
+   at RSys.Sqlite.BaseMapper`2..ctor(TSource source) in D:\code\RSys.Api\RSys.Sqlite\BaseMapper.cs:line 23
+   at RSys.Sqlite.Mapper.QuestionnaireDTOModelMapper..ctor(QuestionnaireDTO questionnaireDTO) in D:\code\RSys.Api\RSys.Sqlite\Mapper\QuestionnaireDTOModelMapper.cs:line 12
+   at RSys.Sqlite.Repository.QuestionnaireRepository.GetAllAsync() in D:\code\RSys.Api\RSys.Sqlite\Repository\QuestionnaireRepository.cs:line 32
+   at RSys.CQRS.Handler.AllQnairesHandler.handle(AllQnairesRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\Handler\AllQnairesHandler.cs:line 17
+   at RSys.CQRS.BaseGetCommandHandler`2.Handle(TRequest request, CancellationToken cancellationToken) in D:\code\RSys.Api\RSys.CQRS\BaseGetCommandHandler.cs:line 44
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at RSys.Api.Api.Controllers.QnaireController.GetAsync() in D:\code\RSys.Api\RSys.Api.Api\Controllers\QnaireController.cs:line 26 
+2021-09-12 15:59:20.1614||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 15:59:23.4143||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 15:59:23.4143||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 15:59:23.4340||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 16:01:37.5214||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 16:01:39.4151||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 16:01:39.4151||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 16:01:39.4350||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 16:03:55.5747||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 16:03:57.4641||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 16:03:57.4641||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 16:03:57.4791||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 16:04:50.4947|1|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request. System.NullReferenceException: Object reference not set to an instance of an object.
+   at RSys.Domain.Models.Occupation.ToString() in D:\code\RSys.Api\RSys.Domain\Models\Occupation.cs:line 14
+   at RSys.Domain.Models.Questionnaire.get_Description() in D:\code\RSys.Api\RSys.Domain\Models\Questionnaire.cs:line 15
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.ListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-09-12 16:06:01.7894||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 16:06:04.1483||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 16:06:04.1483||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 16:06:04.1483||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 16:09:14.6334||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 16:09:16.8816||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 16:09:16.8874||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 16:09:16.8986||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 16:12:03.3686||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 16:12:06.5974||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 16:12:06.6024||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 16:12:06.6024||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 16:13:45.3450||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 16:13:49.1109||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 16:13:49.1170||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 16:13:49.1170||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 16:17:52.8554||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 16:17:54.6232||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 16:17:54.6232||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 16:17:54.6404||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 16:19:46.8760||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 16:19:50.1401||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 16:19:50.1489||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 16:19:50.1489||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 16:23:31.1888||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 16:23:32.5774||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 16:23:32.5774||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 16:23:32.5948||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 
+2021-09-12 16:31:16.7890||DEBUG|RSys.Api.Api.Program|Application Starting Up 
+2021-09-12 16:31:18.8829||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2021-09-12 16:31:18.8829||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2021-09-12 16:31:18.9109||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\code\RSys.Api\RSys.Api.Api 

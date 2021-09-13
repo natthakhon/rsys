@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "6sdjsD4dRWNJqQAJW5fX61gRG0srMcIJWWj3Jox+UZQLmV5X36FFSAPTPiVqpNjVypi/qQFxZxm8mohOeUIB5A==",
+  "success": true,
+  "projectFilePath": "D:\\code\\RSys.Api\\RSys.CQRS\\RSys.CQRS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nattl\\.nuget\\packages\\fluentvalidation\\10.3.3\\fluentvalidation.10.3.3.nupkg.sha512",
+    "C:\\Users\\nattl\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
