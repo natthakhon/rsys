@@ -119,6 +119,6 @@ export class PersonalInfoComponent implements OnInit {
     const qnaireservice = new QnaireService(this.http);
     qnaireservice.postqnaire(qnaire).subscribe(data => {
       alert('done');
-    }, e => { alert(e.error);})
+    }, e => { alert(e.error); }, () => { this.getqnaires() })
   }
 }
